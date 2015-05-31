@@ -1,0 +1,15 @@
+# Site settings
+title: James Web
+description: "Desenvolvedor Front-End // Entusiasta de UX e SEO"
+email: yesmrjames@gmail.com
+
+# Build settings
+
+markdown: kramdown
+permalink: pretty
+
+port: 9000
+
+sass:
+  sass_dir: assets/css
+  style: :nested
