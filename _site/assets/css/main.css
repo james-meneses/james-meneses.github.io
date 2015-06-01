@@ -340,7 +340,7 @@ td, th {
     transform: rotate(359deg); } }
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #BD5248;
+  color: #F6C;
   font-weight: bold; }
 
 .gigantic {
@@ -388,13 +388,18 @@ hr {
 *, *:hover, *:after {
   box-sizing: border-box; }
 
+h3 {
+  color: #FA6D6D;
+  text-align: center;
+  padding: 70px 0 30px; }
+
 a {
-  color: #BD5248;
+  color: #FA6D6D;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: #fdd0d0; }
 
 ::selection {
   background: #FFF498; }
@@ -420,10 +425,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-header nav a, h3, footer .lockup .content-wrap a {
+h3, header nav a, footer .lockup .content-wrap a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
+
+.habilidades .item .icone.nivel-1 span:nth-child(n+2), .habilidades .item .icone.nivel-2 span:nth-child(n+3), .habilidades .item .icone.nivel-3 span:nth-child(n+4), .habilidades .item .icone.nivel-4 span:nth-child(n+5), .habilidades .item .icone.nivel-5 span:nth-child(n+6), .habilidades .item .icone.nivel-6 span:nth-child(n+7), .habilidades .item .icone.nivel-7 span:nth-child(n+8), .habilidades .item .icone.nivel-8 span:nth-child(n+9), .habilidades .item .icone.nivel-9 span:nth-child(n+10), .habilidades .item .icone.nivel-10 span:nth-child(n+11) {
+  background: #F6F6F8; }
 
 header {
   height: 450px;
@@ -475,11 +483,6 @@ header {
       background: #1e1e1e;
       background: rgba(30, 30, 30, 0.65); }
 
-h3 {
-  color: #FA6D6D;
-  text-align: center;
-  padding: 70px 0 30px; }
-
 .quadro-perfil {
   max-width: 780px;
   display: -webkit-box;
@@ -499,15 +502,15 @@ h3 {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: center; }
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
   .quadro-perfil .foto-perfil {
     height: 200px;
     width: 200px;
@@ -526,14 +529,15 @@ h3 {
       margin-left: -0.4em; }
 
 .blurb {
-  max-width: 678px;
+  max-width: 840px;
   padding: 0 15px;
   margin: 50px auto;
   font-size: 24px;
   text-align: center;
   font-weight: 300; }
   .blurb strong {
-    color: #FA6D6D; }
+    color: #FA6D6D;
+    display: block; }
 
 @media screen and (max-width: 650px) {
   .quadro-perfil {
@@ -549,15 +553,59 @@ h3 {
         width: auto;
         margin-bottom: 30px;
         clear: both;
-        order: 1; }
+        over: 1; }
       .quadro-perfil div.code {
-        order: 2; }
+        over: 2; }
       .quadro-perfil div.mobile {
-        order: 3; }
+        over: 3; }
       .quadro-perfil div.ok {
-        order: 4; }
+        over: 4; }
       .quadro-perfil div.thumbs-up {
-        order: 5; } }
+        over: 5; } }
+.habilidades {
+  max-width: 700px;
+  margin: 50px auto;
+  color: #999; }
+  .habilidades:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .habilidades .item {
+    width: 350px;
+    float: left; }
+    .habilidades .item .titulo {
+      text-align: left;
+      padding: 0;
+      margin-bottom: 0.45em;
+      color: #999; }
+    .habilidades .item .icone {
+      font-size: 0;
+      margin: 0px 0 30px; }
+      .habilidades .item .icone span {
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+        background-color: #FA6D6D;
+        margin-right: 5px;
+        border-radius: 50%; }
+        .habilidades .item .icone span:after {
+          content: "";
+          display: block;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background: #fff;
+          margin: 2px; }
+
+@media screen and (max-width: 800px) {
+  .blurb {
+    font-size: 20px; }
+
+  .habilidades {
+    max-width: 70%; }
+
+  .habilidade {
+    width: 270px; } }
 footer {
   background: url(../img/hero-com.jpg) center center;
   background-size: cover; }

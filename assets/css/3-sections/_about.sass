@@ -1,15 +1,9 @@
-h3
-  @extend %small-bold
-  color: $accent-light
-  text-align: center
-  padding: 70px 0 30px
-
 .quadro-perfil
   max-width: 780px
   @include display(flex)
   margin: 0 auto
   @include align-items(center)
-  @include justify-content(space-around)
+  @include justify-content(space-between)
 
   .foto-perfil
     +size(200px)
@@ -31,7 +25,7 @@ h3
       margin-left: -0.4em
 
 .blurb
-  max-width: 678px
+  max-width: 840px
   padding: 0 15px
   margin: 50px auto
   font-size: 24px
@@ -40,6 +34,7 @@ h3
 
   strong
     color: $accent-light
+    display: block
 
 @media screen and (max-width: 650px)
   .quadro-perfil
@@ -57,16 +52,65 @@ h3
         width: auto
         margin-bottom: 30px
         clear: both
-        order: 1
+        over: 1
 
       &.code
-        order: 2
+        over: 2
 
-      &.mobile 
-        order: 3
+      &.mobile
+        over: 3
 
       &.ok
-        order: 4
+        over: 4
 
       &.thumbs-up
-        order: 5
+        over: 5
+
+.habilidades
+  max-width: 700px
+  margin: 50px auto
+  color: #999
+  @include clearfix
+
+  .item
+    width: 350px
+    float: left
+
+    .titulo
+      text-align: left
+      padding: 0
+      margin-bottom: .45em
+      color: #999
+
+    .icone
+      font-size: 0
+      margin: 0px 0 30px
+
+      span
+        display: inline-block
+        @include size(14px)
+        background-color: $accent-light
+        margin-right: 5px
+        border-radius: 50%
+
+        &:after
+          content: ''
+          display: block
+          @include size(10px)
+          border-radius: 50%
+          background: #fff
+          margin: 2px
+
+      @for $i from 1 through 10
+        &.nivel-#{$i} span:nth-child(n+#{$i+1})
+          @extend %background-default
+
+@media screen and (max-width: 800px)
+  .blurb
+    font-size: 20px
+
+  .habilidades
+    max-width: 70%
+
+  .habilidade
+    width: 270px

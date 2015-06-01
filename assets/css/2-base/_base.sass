@@ -2,7 +2,7 @@
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
-  color: $accent-color
+  color: $primary-color
   font-weight: bold
 
 .gigantic
@@ -51,6 +51,12 @@ hr
 
 *, *:hover, *:after
   box-sizing: border-box
+
+h3
+  @extend %small-bold
+  color: $accent-light
+  text-align: center
+  padding: 70px 0 30px
 
 
 // Links
