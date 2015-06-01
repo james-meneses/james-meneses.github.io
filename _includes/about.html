@@ -1,5 +1,5 @@
-<section>
-  <h3 id="sobre">Sobre Mim</h3>
+<section id="sobre">
+  <h3>Sobre Mim</h3>
 
   <div class="quadro-perfil">
     <div class="code"><i class="icon-code"></i></div>
@@ -11,132 +11,20 @@
 
 
     <div class="blurb">
-      <p><strong>Sou um desenvolvedor auto-didata à procura de grandes desafios.</strong> Focado na experiência do usuário, busco desenvolver websites atratíveis, responsíveis, escaláveis e otimizados.</p>
+      {{ site.data.portifolio.blurb }}
     </div>
 
   <div class="habilidades">
-    <div class="item">
-      <h3 class="titulo">Pro-atividade</h3>
-      <div class="icone nivel-8">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="item">
-      <h3 class="titulo">Auto-Didatismo</h3>
-      <div class="icone nivel-10">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="item">
-      <h3 class="titulo">Planejamento</h3>
-      <div class="icone nivel-8">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="item">
-      <h3 class="titulo">Comunicação</h3>
-      <div class="icone nivel-8">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="item">
-      <h3 class="titulo">UX Design</h3>
-      <div class="icone nivel-6">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="item">
-      <h3 class="titulo">SEO OnPage</h3>
-      <div class="icone nivel-7">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
 
+    {% for item in site.data.portifolio.habilidades %}
     <div class="item">
-      <h3 class="titulo">Desenvolvimento Front-End</h3>
-      <div class="icone nivel-8">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <h3 class="titulo">{{ item.name }}</h3>
+      <div class="icone nivel-{{ item.value }}">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>        <span></span>
       </div>
     </div>
-
-    <div class="item">
-      <h3 class="titulo">Desenvolvimento Wordpress</h3>
-      <div class="icone nivel-6">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+    {% endfor %}
 
   </div>
 </section>

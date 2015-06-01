@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.sobre .foto-perfil {
+  background-image: url(../img/profile-img.jpg); }
+
+.footer .logo {
+  background-image: url(../img/logo.html); }
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

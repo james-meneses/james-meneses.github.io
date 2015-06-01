@@ -1,0 +1,31 @@
+# Configurações do Portifolio
+title: James Web
+description: "Desenvolvedor Front-End // Entusiasta de UX e SEO"
+email: yesmrjames@gmail.com
+
+#Lista de Itens do Menu
+
+menu:
+- {name: Sobre, url: '#sobre'}
+- {name: Projetos, url: '#projetos'}
+- {name: Clientes, url: '#clientes'}
+- {name: Contato, url: '#contato'}
+
+#Lista de Habilidades
+
+habilidades:
+- {name: Auto-Didatismo, value: '10' }
+- {name: Pro-Atividade, value: '8'}
+- {name: Planejamento, value: '8'}
+- {name: Comunicação, value: '8'}
+- {name: Desenvolvimento Front-End, value: '8'}
+- {name: SEO OnPage, value: '7'}
+- {name: UX Design, value: '6'}
+- {name: Desenvolvimento WordPress, value: '6'}
+
+#Troca informações do site
+logo: 'logo.html'
+bg-image: 'hero-com.jpg'
+
+avatar: 'profile-img.jpg' 
+blurb: <p><strong>Sou um desenvolvedor auto-didata à procura de grandes desafios.</strong> Focado na experiência do usuário, busco desenvolver websites atratíveis, responsíveis, escaláveis e otimizados.</p>
