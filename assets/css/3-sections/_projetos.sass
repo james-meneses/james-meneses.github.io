@@ -13,7 +13,7 @@
     float: left
     position: relative
     padding-top: 16%
-    overflow: hidden
+    //overflow: hidden
     text-align: center
     background:
       position: center center
@@ -33,12 +33,17 @@
       +display(flex)
       +align-items(center)
       +justify-content(space-around)
+      opacity: 0
       +transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1))
+      +transition(opacity, 300ms, ease-in, 500ms)
 
-    &:hover .overlay
-      //+position(absolute, 0% 0px null 0px)
-      @extend %animation
+    &:hover
+      z-index: 2
 
+      .overlay
+        @extend %animation
+        opacity: 1
+ 
     strong
       display: block
       padding: 20px
