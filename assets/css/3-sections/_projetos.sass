@@ -19,23 +19,25 @@
       position: center center
       repeat: no-repeat
       size: cover
+    +perspective(300)
 
     @media screen and (max-width: 800px)
       width: 50%
       padding-top: 28%
 
     .overlay
-      +position(absolute, 100% 0px null 0px)
+      +position(absolute, 0% 0px null 0px)
       height: 100%
       background: fade-out($accent, .15)
       font-size: 15px
-      +transition
       +display(flex)
       +align-items(center)
       +justify-content(space-around)
+      +transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1))
 
     &:hover .overlay
-      +position(absolute, 0% 0px null 0px)
+      //+position(absolute, 0% 0px null 0px)
+      @extend %animation
 
     strong
       display: block
