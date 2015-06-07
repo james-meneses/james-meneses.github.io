@@ -1,0 +1,17 @@
+<section class="alt-section">
+  <h3 id="projetos">Projetos</h3>
+
+  <div class="container">
+
+    {% for item in site.data.portifolio.projetos %}
+    <a href="" class="item proj-{{ item.id }}" >
+      <div class="overlay">
+        <strong>{{ item.nome }}</strong>
+        <!--
+          <i class="icon-zoom-in-outline"></i>
+        -->
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

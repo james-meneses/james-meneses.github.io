@@ -4,7 +4,6 @@ description: "Desenvolvedor Front-End // Entusiasta de UX e SEO"
 email: yesmrjames@gmail.com
 
 #Lista de Itens do Menu
-
 menu:
 - {name: Sobre, url: '#sobre'}
 - {name: Projetos, url: '#projetos'}
@@ -12,7 +11,6 @@ menu:
 - {name: Contato, url: '#contato'}
 
 #Lista de Habilidades
-
 habilidades:
 - {name: Auto-Didatismo, value: '10' }
 - {name: Pro-Atividade, value: '8'}
@@ -23,9 +21,20 @@ habilidades:
 - {name: UX Design, value: '6'}
 - {name: Desenvolvimento WordPress, value: '6'}
 
+#lista de Projetos
+projetos:
+- {id: 1, nome: 'IOS APP - UI e UX Design', tags: ''}
+- {id: 2, nome: '', tags: ''}
+- {id: 3, nome: '', tags: ''}
+- {id: 4, nome: '', tags: ''}
+- {id: 5, nome: '', tags: ''}
+- {id: 6, nome: '', tags: ''}
+- {id: 7, nome: '', tags: ''}
+- {id: 8, nome: '', tags: ''}
+
 #Troca informações do site
 logo: 'logo.html'
 bg-image: 'hero-com.jpg'
 
-avatar: 'profile-img.jpg' 
+avatar: 'profile-img.jpg'
 blurb: <p><strong>Sou um desenvolvedor auto-didata à procura de grandes desafios.</strong> Focado na experiência do usuário, busco desenvolver websites atratíveis, responsíveis, escaláveis e otimizados.</p>

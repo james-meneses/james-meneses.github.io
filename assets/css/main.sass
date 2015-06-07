@@ -6,6 +6,12 @@
 .footer .logo
   background-image: url(../img/{{ site.data.portifolio.logo }})
 
+{% for item in site.data.portifolio.projetos %}
+.alt-section .item.proj-{{ item.id }}
+  background-image: url('../img/projetos/proj-{{ item.id }}/miniatura.jpg')
+{% endfor %}
+
+
 @import '1-tools/-tools-index'
 @import '2-base/-base-index'
 @import '3-sections/-sections-dir'

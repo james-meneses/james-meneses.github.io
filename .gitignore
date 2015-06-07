@@ -24,3 +24,6 @@ Temporary Items
 
 ### Sass ###
 .sass-cache
+
+/assets/img/projetos
+_site/assets/img/projetos/*
