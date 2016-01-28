@@ -1,5 +1,10 @@
 ---
 ---
+//----------------------------------------------------
+
+$projetos: {% for projeto in site.data.portifolio.projetos %} "{{ projeto.id }}", {% endfor %}
+
+//----------------------------------------------------
 .sobre .foto-perfil
   background-image: url(../img/{{ site.data.portifolio.avatar }})
 

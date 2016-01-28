@@ -7,7 +7,6 @@ email: yesmrjames@gmail.com
 menu:
 - {name: Sobre, url: '#sobre'}
 - {name: Projetos, url: '#projetos'}
-- {name: Clientes, url: '#clientes'}
 - {name: Contato, url: '#contato'}
 
 #Lista de Habilidades
@@ -24,13 +23,13 @@ habilidades:
 #lista de Projetos
 projetos:
 - {id: 1, nome: 'IOS APP - UI e UX Design', tags: ''}
-- {id: 2, nome: '', tags: ''}
-- {id: 3, nome: '', tags: ''}
-- {id: 4, nome: '', tags: ''}
-- {id: 5, nome: '', tags: ''}
-- {id: 6, nome: '', tags: ''}
-- {id: 7, nome: '', tags: ''}
-- {id: 8, nome: '', tags: ''}
+- {id: 2, nome: 'The Weeknd', tags: ''}
+- {id: 3, nome: 'Drake', tags: ''}
+- {id: 4, nome: 'Lana Del Rey', tags: ''}
+- {id: 5, nome: 'Melanie Martinez', tags: ''}
+- {id: 6, nome: 'Los Hermanos', tags: ''}
+- {id: 7, nome: 'Rubel', tags: ''}
+- {id: 8, nome: 'Cícero', tags: ''}
 
 #Troca informações do site
 logo: 'logo.html'

@@ -1,17 +1,53 @@
-<section class="alt-section">
+<section class="alt-section section-projetos">
   <h3 id="projetos">Projetos</h3>
 
-  <div class="container">
+  {% for projeto in site.data.portifolio.projetos %}
+    <input type="radio" name="trigger" class="trigger" id="{{ projeto.id }}" />
+  {% endfor %}
 
-    {% for item in site.data.portifolio.projetos %}
-    <a href="" class="item proj-{{ item.id }}" >
-      <div class="overlay">
-        <strong>{{ item.nome }}</strong>
-        <!--
-          <i class="icon-zoom-in-outline"></i>
-        -->
+  <input type="radio" name="trigger" class="return" id="return" />
+
+  <!-- ProjBox -->
+  <div class="proj-box">
+    <div class="thumb-wrap">
+      <div class="thumb-container">
+        {% for projeto in site.data.portifolio.projetos %}
+        <label for="content-proj-{{ projeto.id }}">
+          <div class="thumb-unit item" data-folder="projetos/proj-{{projeto.id}}">
+            <img src="assets/img/projetos/proj-{{projeto.id}}/miniatura.jpg" alt="{{ projeto.nome }}" />
+          </div>
+
+          <div class="overlay thumb-overlay">
+            <strong>{{projeto.nome}}</strong>
+          </div>
+
+        </label>
+
+        {% endfor %}
       </div>
-    </a>
-    {% endfor %}
-  </div>
+    </div>
+
+    <div class="proj-wrap">
+      <div class="proj-container">
+        <label for="return">
+          <div class="proj-return">{% include icons/icon-back.html %}</div>
+        </label>
+        <h4 class="proj-title"></h4>
+        <div class="proj-load"></div>
+
+        <noscript>
+          {% for projeto in site.data.portifolio.projetos %}
+          <div class="noscript" id="content-proj-{{ projeto.id }}">
+            <h4 class="proj-title"> {{ projeto.nome }} </h4>
+            <div class="noscript-load">
+              {% include projetos/proj-{{projeto.id}}.html %}
+            </div>
+          </div>
+          {% endfor %}
+        </noscript>
+
+      </div>
+    </div>
+
+  </div><!-- END ProjBox -->
 </section>

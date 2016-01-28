@@ -1,0 +1,56 @@
+/*--------- Section Contato -------- */
+.section-contato
+	text-align: center
+	margin: 0 auto 3em
+
+
+.links-sociais
+	max-width: 700px
+	margin: 0 auto 50px
+	+display(flex)
+	+justify-content(space-around)
+	+flex-wrap(wrap)
+
+	a
+		display: block
+		background: $accent-light
+		+size(50px)
+		text-align: center
+		line-height: 50px
+		border-radius: 50%
+		font-size: 21px
+		margin: 20px
+		color: white
+		transition: all 0.15s ease-out 0s
+
+		&:hover
+			+transform(scale(1.2))
+			background: $accent-light
+
+.bar
+	width: 250px
+	height: 0px
+	border-top: 4px solid $accent
+	margin: 0 auto 50px
+
+.biglink
+	display: inline-block
+	font-weight: 300
+	font-size: 54px
+	line-height: 1
+
+	&:hover
+		color: $accent
+
+	@media screen and (max-width: 960px)
+		font-size: 38px
+		margin-bottom: 35px
+
+	@media screen and (max-width: 750px)
+		font-size: 30px
+		margin-bottom: 35px
+
+	@media screen and (max-width: 580px)
+		font-size: 24px
+
+/*--------- END Section Contato -------- */

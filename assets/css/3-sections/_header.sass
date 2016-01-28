@@ -1,7 +1,11 @@
 header
   height: 450px
-  background: url(../img/hero-com.jpg) center center
+  background: url(../img/hero.jpg) center center
   background-size: cover
+
+  @media screen and (max-width: 792px)
+    height: 320px
+    background: url(../img/hero-mb.jpg) center center
 
   .logo
     +size(75px)
@@ -42,6 +46,10 @@ header
       border: #333 solid 10px
       padding: 0.2em 0.5em 0.3em 0.65em
 
+    @media screen and (max-width: 792px)
+      margin: 1rem auto
+      padding-top: 2rem
+
   .kicker
     line-height: 1
     text-align: center
@@ -51,7 +59,10 @@ header
     letter-spacing: 0.05em
     color: #fff
 
+    @media screen and (max-width: 480px)
+      font-size: 10px
+
     span
       padding: 8px
-      background: rgb(30,30,30)
-      background: rgba(30,30,30,0.65)
+      background: rgb(30, 30, 30)
+      background: rgba(30, 30, 30, 0.65)

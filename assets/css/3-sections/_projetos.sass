@@ -1,57 +1,129 @@
 .alt-section
   background: $bg-color
 
-.container
+.section-projetos
+  overflow-x: hidden
+
+.noscript
+  display: none
+
+@each $proj in $projetos
+  ##{$proj}:checked ~ .proj-box .proj-wrap .proj-container noscript #content-proj-#{$proj}
+    display: block
+
+.return
+  display: none
+
+.trigger
+  display: none
+
+  &:checked ~ .proj-box
+    left: -100%
+
+    .proj-wrap .proj-container
+      display: block
+
+/* End of gross /the damn needed hackey CSS */
+.proj-box
+  width: 200%
+  position: relative
+  left: 0%
+  +transition(all, 800ms)
+
+  &.slided
+    +transform(translate3d(-50%, 0, 0))
+
+.thumb-wrap, .proj-wrap
+  width: 50%
+  float: left
+
+.thumb-container
+  display: block
   max-width: 960px
   margin: 0px auto
-  padding-bottom: 100px
   +clearfix
 
-  .item
-    display: block
-    width: 25%
-    float: left
+  label
     position: relative
-    padding-top: 16%
-    //overflow: hidden
-    text-align: center
-    background:
-      position: center center
-      repeat: no-repeat
-      size: cover
-    +perspective(300)
+    display: block
+    float: left
+    width: 25%
+    cursor: pointer
 
-    @media screen and (max-width: 800px)
+    .thumb-unit
+      display: block
+      overflow: hidden
+
+      img
+        display: block
+        max-width: 100%
+
+    @media screen and (max-width: 760px)
       width: 50%
-      padding-top: 28%
 
-    .overlay
-      +position(absolute, 0% 0px null 0px)
-      height: 100%
-      background: fade-out($accent, .15)
-      font-size: 15px
-      +display(flex)
+    .thumb-overlay
+      +position(absolute)
       +align-items(center)
       +justify-content(space-around)
-      opacity: 0
-      +transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1))
-      +transition(opacity, 300ms, ease-in, 500ms)
+      +display(flex)
+      background: fade-out($accent, 0.1)
+      text-align: center
+      @extend %animationstart_bounceOut
+
+      strong
+        display: block
+        padding: 0 9%
+        color: white
+        font:
+          weight: 300
+          size: 24px
+        text-transform: uppercase
+        line-height: 1.2
 
     &:hover
       z-index: 2
 
-      .overlay
-        @extend %animation
-        opacity: 1
- 
-    strong
-      display: block
-      padding: 20px
-      color: white
-      font-weight: 300
-      text-transform: uppercase
-      line-height: 1.2em
+      .thumb-overlay
+        @extend %bounceOut
 
-    i
-      font-size: 22px
-      color: #fff
+.proj-container
+  max-width: 600px
+  margin: 0 auto
+  padding: 0 15px
+  +box-sizing(border-box)
+
+  position: relative
+  display: none
+
+  h4, noscript h4
+    color: $accent
+    font-weight: 300
+    text-transform: uppercase
+    font-size: 28px
+    line-height: 1.2
+    margin: 0 0 20px
+
+  img
+    max-width: 100%
+    margin-bottom: 20px
+
+  .proj-return
+    +size(40px)
+    cursor: pointer
+    opacity: 0.5
+    +position(absolute, -4px null null -60px)
+
+    path
+      fill: rgba(0, 0, 0, 0.4)
+
+    &:hover
+      opacity: 1
+
+@media (max-width: 740px)
+  .proj-container
+
+    .proj-return
+      left: 0px
+
+    h4
+      margin-left: 60px

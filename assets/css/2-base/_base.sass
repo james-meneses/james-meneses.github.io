@@ -67,17 +67,17 @@ a
   outline: 0
 
 a:hover, a:focus
-  color: lighten($link-color, 20%)
+  color: darken($accent-light, 10)
 
 
 
 // Selection colors (easy to forget)
 
 ::selection
-  background: $selection-color
+  background: $accent-light
 
 ::-moz-selection
-  background: $selection-color
+  background: $accent-light
 
 img::selection
   background: transparent
@@ -86,8 +86,7 @@ img::-moz-selection
   background: transparent
 
 body
-  -webkit-tap-highlight-color: $selection-color
-
+  -webkit-tap-highlight-color: $accent-light
 
 
 // Basic Styles
@@ -100,3 +99,10 @@ body
   color: $text-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
+
+section:nth-child(odd)
+  background: #fff
+  padding-bottom: 100px
+
+svg
+  +size(100%)
