@@ -22,14 +22,10 @@ habilidades:
 
 #lista de Projetos
 projetos:
-- {id: 1, nome: 'IOS APP - UI e UX Design', tags: ''}
-- {id: 2, nome: 'The Weeknd', tags: ''}
-- {id: 3, nome: 'Drake', tags: ''}
-- {id: 4, nome: 'Lana Del Rey', tags: ''}
-- {id: 5, nome: 'Melanie Martinez', tags: ''}
-- {id: 6, nome: 'Los Hermanos', tags: ''}
-- {id: 7, nome: 'Rubel', tags: ''}
-- {id: 8, nome: 'Cícero', tags: ''}
+- {id: 1, nome: 'Bigoderas - Site Responsivo WordPress', tags: 'front-end, wordpress'}
+- {id: 2, nome: 'Paulo César Camisas', tags: 'website, front-end'}
+- {id: 3, nome: 'Template Bislite', tags: 'website, front-end, seo onpage'}
+
 
 #Troca informações do site
 logo: 'logo.html'

@@ -1,17 +1,24 @@
 .section-formulario
+	&.section
+		padding-bottom: 25px
+
+		@media screen and (max-width: 792px)
+			padding-bottom: 1rem
+
 	.contact-form
 		max-width: 550px
 		margin: 0 auto 50px
+		padding: 0 20px
 
 		input, textarea
-			border: 3px solid $accent-light
+			border: 3px solid $accent
 			width: 100%
 			padding: 10px
-			color: lighten($accent-light, 10)
+			color: $accent-light
 
 		input:focus, textarea:focus
 			outline: none
-			border-color: darken($accent-light, 10)
+			border-color: $accent
 
 		.info-contato
 			label
@@ -31,12 +38,13 @@
 		span
 			display: block
 			margin-bottom: 5px
+			color: darken($accent-light, 10)
 
 		.enviar-wrap
 			text-align: right
 
 			[type=submit]
-				background: $accent-light
+				background: $accent
 				color: white
 				width: 33%
 				border-size: 1px

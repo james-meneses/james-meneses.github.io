@@ -2,7 +2,7 @@
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
-  color: $primary-color
+  color: $accent
   font-weight: bold
 
 .gigantic
@@ -31,7 +31,12 @@ h1, h2, h3, h4, h5, h6
   font-size: 10px
   line-height: 1.2
 
+.left
+  float: left
 
+.note
+  font-size: 11px
+  color: #777
 
 p
   margin: 0 0 20px 0
@@ -74,10 +79,10 @@ a:hover, a:focus
 // Selection colors (easy to forget)
 
 ::selection
-  background: $accent-light
+  background: lighten($accent-light, 10)
 
 ::-moz-selection
-  background: $accent-light
+  background: lighten($accent-light, 10)
 
 img::selection
   background: transparent
@@ -86,7 +91,7 @@ img::-moz-selection
   background: transparent
 
 body
-  -webkit-tap-highlight-color: $accent-light
+  -webkit-tap-highlight-color: lighten($accent-light, 10)
 
 
 // Basic Styles

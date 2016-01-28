@@ -76,11 +76,14 @@
     width: 350px
     float: left
 
+    @media screen and (max-width: 480px)
+      max-width: 350px
+
     .titulo
       text-align: left
       padding: 0
       margin-bottom: .45em
-      color: #999
+      color: #7d7d7d
       font-weight: 300
 
     .icone
@@ -99,7 +102,6 @@
           display: block
           @include size(8px)
           border-radius: 50%
-          background: #fff
           margin: 2px
 
       @for $i from 1 through 10

@@ -25,5 +25,6 @@ Temporary Items
 ### Sass ###
 .sass-cache
 
-/assets/img/projetos
-_site/assets/img/projetos/*
+assets/img/edit
+_site
+edit
