@@ -13,7 +13,7 @@
 
 	a
 		display: block
-		background: $accent-light
+		background: $accent
 		+size(50px)
 		text-align: center
 		line-height: 50px
@@ -38,9 +38,12 @@
 	font-weight: 300
 	font-size: 54px
 	line-height: 1
+	color: $accent
+	transition: 0.25s linear
 
 	&:hover
-		color: $accent
+		color: $accent-light
+		transition: 0.25s linear
 
 	@media screen and (max-width: 960px)
 		font-size: 38px

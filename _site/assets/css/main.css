@@ -180,8 +180,8 @@ td, th {
   src: local("Open Sans"), local("OpenSans"), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
 @font-face {
   font-family: 'jweb';
-  src: url("font/jweb.eot?77670390");
-  src: url("font/jweb.eot?77670390#iefix") format("embedded-opentype"), url("font/jweb.woff?77670390") format("woff"), url("font/jweb.ttf?77670390") format("truetype"), url("font/jweb.svg?77670390#jweb") format("svg");
+  src: url("font/jweb.eot?55941873");
+  src: url("font/jweb.eot?55941873#iefix") format("embedded-opentype"), url("font/jweb.woff?55941873") format("woff"), url("font/jweb.ttf?55941873") format("truetype"), url("font/jweb.svg?55941873#jweb") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
@@ -224,47 +224,86 @@ td, th {
 .icon-thumbs-up:before {
   content: '\e800'; }
 
-/* '¯áÇ' */
+/* '┬»├í├ç' */
 .icon-ok-squared:before {
   content: '\e801'; }
 
-/* '¯áü' */
+/* '┬»├í├╝' */
 .icon-right-hand:before {
   content: '\e802'; }
 
-/* '¯áé' */
+/* '┬»├í├®' */
 .icon-mobile:before {
   content: '\e803'; }
 
-/* '¯áâ' */
+/* '┬»├í├ó' */
 .icon-mobile-1:before {
   content: '\e804'; }
 
-/* '¯áä' */
+/* '┬»├í├ñ' */
 .icon-spin4:before {
   content: '\e805'; }
 
-/* '¯áà' */
+/* '┬»├í├á' */
 .icon-paper-plane-empty:before {
   content: '\e806'; }
 
-/* '¯áå' */
+/* '┬»├í├Ñ' */
 .icon-paper-plane:before {
   content: '\e807'; }
 
-/* '¯áç' */
+/* '┬»├í├º' */
 .icon-heart:before {
   content: '\e808'; }
 
-/* '¯áê' */
+/* '┬»├í├¬' */
 .icon-code:before {
   content: '\e809'; }
 
-/* '¯áë' */
+/* '┬»├í├½' */
 .icon-zoom-in-outline:before {
   content: '\e80a'; }
 
-/* '¯áè' */
+/* '┬»├í├¿' */
+.icon-angle-circled-left:before {
+  content: '\e80b'; }
+
+/* '┬»├í├»' */
+.icon-angle-circled-right:before {
+  content: '\e80c'; }
+
+/* '┬»├í├«' */
+.icon-linkedin:before {
+  content: '\e80d'; }
+
+/* '┬»├í├¼' */
+.icon-linkedin-squared:before {
+  content: '\e80e'; }
+
+/* '┬»├í├ä' */
+.icon-gplus:before {
+  content: '\e80f'; }
+
+/* '┬»├í├à' */
+.icon-twitter:before {
+  content: '\e810'; }
+
+/* '┬»├í├ë' */
+.icon-mail:before {
+  content: '\e811'; }
+
+/* '┬»├í├ª' */
+.icon-mail-1:before {
+  content: '\e812'; }
+
+/* '┬»├í├å' */
+.icon-mobile-2:before {
+  content: '\e813'; }
+
+/* '┬»├í├┤' */
+.icon-phone:before {
+  content: '\e814'; }
+
 /*
   Animation: bounceOut
   Source: Bounce.Js */
@@ -1035,7 +1074,7 @@ header {
   flex-wrap: wrap; }
   .links-sociais a {
     display: block;
-    background: #FA6D6D;
+    background: #F04C4E;
     height: 50px;
     width: 50px;
     text-align: center;
@@ -1063,9 +1102,12 @@ header {
   display: inline-block;
   font-weight: 300;
   font-size: 54px;
-  line-height: 1; }
+  line-height: 1;
+  color: #F04C4E;
+  transition: 0.25s linear; }
   .biglink:hover {
-    color: #F04C4E; }
+    color: #FA6D6D;
+    transition: 0.25s linear; }
   @media screen and (max-width: 960px) {
     .biglink {
       font-size: 38px;
@@ -1101,7 +1143,8 @@ header {
     display: block;
     margin-bottom: 20px; }
   .section-formulario .contact-form span {
-    display: block; }
+    display: block;
+    margin-bottom: 5px; }
   .section-formulario .contact-form .enviar-wrap {
     text-align: right; }
     .section-formulario .contact-form .enviar-wrap [type=submit] {
