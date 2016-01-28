@@ -26,5 +26,5 @@ Temporary Items
 .sass-cache
 
 assets/img/edit
-_site
+_site/
 edit
